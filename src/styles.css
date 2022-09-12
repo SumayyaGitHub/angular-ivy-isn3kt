@@ -1,1 +1,13 @@
 /* Add application styles & imports to this file! */
+/* @import './style-variables.scss'; */
+
+body,
+p,
+div,
+label,
+li,
+form,
+h1,
+h2 {
+  font-family: Roboto;
+}

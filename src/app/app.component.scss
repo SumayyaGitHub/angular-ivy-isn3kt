@@ -1,0 +1,14 @@
+/* -- Main app container section -- */
+
+.container {
+  position: absolute;
+  left: 58px;
+  top: 8px;
+  border: 1px solid rgb(240, 233, 233);
+  width: calc(100vw - 60px);
+  height: calc(100vh - 50px);
+  overflow: auto;
+  overflow-x: hidden;
+  padding: 10px;
+  box-sizing: border-box;
+}
