@@ -1,0 +1,251 @@
+<!-- <p>filters works!</p> -->
+<!-- subheader section item-filter-widget -->
+<div class="dashboard_subheader">
+  <div class="item-filter-widget">
+    <label for="item-sort">Filters based on your profile</label>
+    <div class="filter-item-list">
+      <div class="filter-item">
+        <div class="filter-item-name">Size</div>
+        <div class="filter-item-close">X</div>
+      </div>
+      <div class="filter-item">
+        <div class="filter-item-name">Color</div>
+        <div class="filter-item-close">X</div>
+      </div>
+      <div class="filter-item">
+        <div class="filter-item-name">Footwear</div>
+        <div class="filter-item-close">X</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="btn-group">
+    <button class="button">Clear All</button>
+    <button class="button" (click)="showDialog = !showDialog">Filters</button>
+  </div>
+</div>
+
+<!-- subheader section item-filter-widget -->
+<div class="dashboard_subheader">
+  <p class="filter-result-count"><strong>Showing 26 Product</strong></p>
+  <div class="item-sort-widget">
+    <label for="item-sort">Sort By</label>
+    <select class="select" name="item-sort" id="item-sort">
+      <option value="newest">Newest to oldest</option>
+      <option value="pricelow">Low to high price</option>
+      <option value="pricehigh">High to low price</option>
+    </select>
+  </div>
+</div>
+
+<!-- filter dialog container -->
+<app-dialog [(visible)]="showDialog" title="My Filters">
+  <h2>Filters</h2>
+
+  <div class="item-filter-container">
+    <!-- filter type for side menu navigation from sd -->
+    <div class="filter-type-side-menu">
+      <div class="navbar">
+        <a for="filter-gender"> Gender </a>
+        <a for="filter-price" class="active"> Price </a>
+        <a for="filter-category"> Categories </a>
+        <a for="filter-color"> Color </a>
+      </div>
+    </div>
+    <!-- filter form with details -->
+    <form class="filter-form">
+      <div class="filter-gender filter-list">
+        <label></label>
+        <ul class="filter-gender-list">
+          <li>
+            <label class="container"
+              >Men
+              <input type="checkbox" checked="checked" />
+              <span class="checkmark"></span>
+            </label>
+          </li>
+          <li>
+            <label class="container"
+              >Women
+              <input type="checkbox" checked="checked" />
+              <span class="checkmark"></span>
+            </label>
+          </li>
+          <li>
+            <label class="container"
+              >Boys
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+          </li>
+          <li>
+            <label class="container"
+              >Girls
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+          </li>
+        </ul>
+      </div>
+      <div class="filter-price filter-list active">
+        <label><strong>Price</strong></label>
+        <ul class="filter-price-list">
+          <li>
+            <label class="container"
+              >Rs.1997 to Rs.6172(106)
+              <input type="checkbox" checked="checked" />
+              <span class="checkmark"></span>
+            </label>
+          </li>
+          <li>
+            <label class="container"
+              >Rs.6172 to Rs.10347(16)
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+          </li>
+          <li>
+            <label class="container"
+              >Rs.10347 to Rs.14522(4)
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+          </li>
+          <li>
+            <label class="container"
+              >Rs.14522 to Rs.18697(5)
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+          </li>
+          <li>
+            <label class="container"
+              >Rs.10347 to Rs.14522(4)
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+          </li>
+          <li>
+            <label class="container"
+              >Rs.14522 to Rs.18697(5)
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+          </li>
+        </ul>
+      </div>
+      <div class="filter-category filter-list">
+        <label><strong>Categories</strong></label>
+        <ul class="filter-price-list">
+          <li>
+            <label class="container"
+              >TShirts
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+          </li>
+          <li>
+            <label class="container"
+              >Track Pants
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+          </li>
+          <li>
+            <label class="container"
+              >Sports Shoes
+              <input type="checkbox" checked="checked" />
+              <span class="checkmark"></span>
+            </label>
+          </li>
+          <li>
+            <label class="container">
+              Shoes
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+          </li>
+          <li>
+            <label class="container"
+              >Casual Shoes
+              <input type="checkbox" checked="checked" />
+              <span class="checkmark"></span>
+            </label>
+          </li>
+          <li>
+            <label class="container"
+              >Shorts
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+          </li>
+          <li>
+            <label class="container"
+              >Track Pants
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+          </li>
+          <li>
+            <label class="container"
+              >Tops
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+          </li>
+        </ul>
+        <br />
+      </div>
+      <div class="filter-color filter-list">
+        <label><strong>Color</strong></label>
+        <ul class="filter-color-list">
+          <li>
+            <label class="container"
+              >Black
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+          </li>
+          <li>
+            <label class="container"
+              >White
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+          </li>
+          <li>
+            <label class="container"
+              >Brown
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+          </li>
+          <li>
+            <label class="container"
+              >Red
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+          </li>
+        </ul>
+      </div>
+    </form>
+
+    <div class="btn-dialog btn-group" style="width:100%">
+      <button
+        class="btn-default"
+        style="width:50%"
+        (click)="showDialog = !showDialog"
+      >
+        Clear All
+      </button>
+      <button
+        class="btn-primary"
+        style="width:50%"
+        (click)="showDialog = !showDialog"
+      >
+        Apply
+      </button>
+    </div>
+  </div>
+</app-dialog>

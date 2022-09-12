@@ -1,0 +1,44 @@
+/* -- left side menu navigation section -- */
+@import '../../../style-variables.scss';
+
+.navbar {
+  width: 50px;
+  height: calc(100vh - 50px);
+  overflow: none;
+  background: $main-color;
+
+  a {
+    // float: left;
+    //  display: block;
+    display: flex;
+    padding: 17px;
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    &.logo {
+      padding-bottom: 5rem;
+    }
+    &.active {
+      background-color: #586cda;
+    }
+    &:hover:not(.logo),
+    &:focus:not(.logo) {
+      background-color: #8694e2;
+      svg {
+        path {
+          fill: rgb(145, 228, 145);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  // .navbar {
+  //   // width: auto;
+  //   a {
+  //     float: none;
+  //     display: block;
+  //   }
+  // }
+}
